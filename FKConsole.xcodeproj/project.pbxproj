@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7900176B1C4FB02200930E13 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7900176A1C4FB02200930E13 /* AppKit.framework */; };
+		7900176D1C4FB02200930E13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7900176C1C4FB02200930E13 /* Foundation.framework */; };
+		790017711C4FB02200930E13 /* FKConsole.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 790017701C4FB02200930E13 /* FKConsole.xcscheme */; };
+		790017741C4FB02200930E13 /* FKConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 790017731C4FB02200930E13 /* FKConsole.m */; };
+		790017771C4FB02200930E13 /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 790017761C4FB02200930E13 /* NSObject_Extension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		790017671C4FB02200930E13 /* FKConsole.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FKConsole.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		7900176A1C4FB02200930E13 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		7900176C1C4FB02200930E13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		790017701C4FB02200930E13 /* FKConsole.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = FKConsole.xcscheme; path = FKConsole.xcodeproj/xcshareddata/xcschemes/FKConsole.xcscheme; sourceTree = SOURCE_ROOT; };
+		790017721C4FB02200930E13 /* FKConsole.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FKConsole.h; sourceTree = "<group>"; };
+		790017731C4FB02200930E13 /* FKConsole.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FKConsole.m; sourceTree = "<group>"; };
+		790017751C4FB02200930E13 /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		790017761C4FB02200930E13 /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
+		790017781C4FB02200930E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		790DD7D51C50AE970086B3AA /* DVTCompletingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCompletingTextView.h; sourceTree = "<group>"; };
+		790DD7D61C50AE970086B3AA /* DVTCompletingTextViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCompletingTextViewDelegate.h; sourceTree = "<group>"; };
+		790DD7D71C50AE970086B3AA /* DVTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTextView.h; sourceTree = "<group>"; };
+		790DD7D81C50AE970086B3AA /* IDEConsoleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEConsoleTextView.h; sourceTree = "<group>"; };
+		790DD7D91C50AE970086B3AA /* IDEConsoleTextViewObjectiveCExpressionRangeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEConsoleTextViewObjectiveCExpressionRangeDelegate.h; sourceTree = "<group>"; };
+		790DD7DA1C50AE970086B3AA /* IDEConsoleTextViewStandardIODelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEConsoleTextViewStandardIODelegate.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		790017651C4FB02200930E13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7900176B1C4FB02200930E13 /* AppKit.framework in Frameworks */,
+				7900176D1C4FB02200930E13 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7900175E1C4FB02200930E13 = {
+			isa = PBXGroup;
+			children = (
+				7900176E1C4FB02200930E13 /* FKConsole */,
+				790017691C4FB02200930E13 /* Frameworks */,
+				790017681C4FB02200930E13 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		790017681C4FB02200930E13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				790017671C4FB02200930E13 /* FKConsole.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		790017691C4FB02200930E13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7900176A1C4FB02200930E13 /* AppKit.framework */,
+				7900176C1C4FB02200930E13 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7900176E1C4FB02200930E13 /* FKConsole */ = {
+			isa = PBXGroup;
+			children = (
+				790017721C4FB02200930E13 /* FKConsole.h */,
+				790017731C4FB02200930E13 /* FKConsole.m */,
+				790017751C4FB02200930E13 /* NSObject_Extension.h */,
+				790017761C4FB02200930E13 /* NSObject_Extension.m */,
+				790DD7D41C50AE970086B3AA /* Header */,
+				790017781C4FB02200930E13 /* Info.plist */,
+				7900176F1C4FB02200930E13 /* Supporting Files */,
+			);
+			path = FKConsole;
+			sourceTree = "<group>";
+		};
+		7900176F1C4FB02200930E13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				790017701C4FB02200930E13 /* FKConsole.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		790DD7D41C50AE970086B3AA /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				790DD7D51C50AE970086B3AA /* DVTCompletingTextView.h */,
+				790DD7D61C50AE970086B3AA /* DVTCompletingTextViewDelegate.h */,
+				790DD7D71C50AE970086B3AA /* DVTTextView.h */,
+				790DD7D81C50AE970086B3AA /* IDEConsoleTextView.h */,
+				790DD7D91C50AE970086B3AA /* IDEConsoleTextViewObjectiveCExpressionRangeDelegate.h */,
+				790DD7DA1C50AE970086B3AA /* IDEConsoleTextViewStandardIODelegate.h */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		790017661C4FB02200930E13 /* FKConsole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7900177B1C4FB02200930E13 /* Build configuration list for PBXNativeTarget "FKConsole" */;
+			buildPhases = (
+				790017631C4FB02200930E13 /* Sources */,
+				790017641C4FB02200930E13 /* Resources */,
+				790017651C4FB02200930E13 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FKConsole;
+			productName = FKConsole;
+			productReference = 790017671C4FB02200930E13 /* FKConsole.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7900175F1C4FB02200930E13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Fujun;
+				TargetAttributes = {
+					790017661C4FB02200930E13 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 790017621C4FB02200930E13 /* Build configuration list for PBXProject "FKConsole" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7900175E1C4FB02200930E13;
+			productRefGroup = 790017681C4FB02200930E13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				790017661C4FB02200930E13 /* FKConsole */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		790017641C4FB02200930E13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				790017711C4FB02200930E13 /* FKConsole.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		790017631C4FB02200930E13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				790017741C4FB02200930E13 /* FKConsole.m in Sources */,
+				790017771C4FB02200930E13 /* NSObject_Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		790017791C4FB02200930E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		7900177A1C4FB02200930E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		7900177C1C4FB02200930E13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = FKConsole/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifujun.fkconsole.FKConsole;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		7900177D1C4FB02200930E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = FKConsole/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ifujun.fkconsole.FKConsole;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		790017621C4FB02200930E13 /* Build configuration list for PBXProject "FKConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				790017791C4FB02200930E13 /* Debug */,
+				7900177A1C4FB02200930E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7900177B1C4FB02200930E13 /* Build configuration list for PBXNativeTarget "FKConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7900177C1C4FB02200930E13 /* Debug */,
+				7900177D1C4FB02200930E13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7900175F1C4FB02200930E13 /* Project object */;
+}

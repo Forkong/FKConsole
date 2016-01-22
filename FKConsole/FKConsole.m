@@ -16,7 +16,7 @@ static NSString * const kContentMutableStringKey = @"_contents.mutableString";
 @interface FKConsole()<NSTextStorageDelegate>
 
 @property (nonatomic, strong, readwrite) NSBundle *bundle;
-@property (nonatomic, strong) IDEConsoleTextView *fkConsoleTextView;
+
 @property (nonatomic, assign) NSCellStateValue menuState;
 @end
 
@@ -41,6 +41,7 @@ static NSString * const kContentMutableStringKey = @"_contents.mutableString";
                                                  selector:@selector(textStorageDidChange:)
                                                      name:NSTextDidChangeNotification
                                                    object:nil];
+        
     }
     return self;
 }
@@ -57,10 +58,10 @@ static NSString * const kContentMutableStringKey = @"_contents.mutableString";
 
 - (void)textStorageDidChange:(NSNotification *)noti
 {
-    if (!self.fkConsoleTextView &&
-        self.menuState == NSOnState)
+    if ([noti.object isKindOfClass:NSClassFromString(@"IDEConsoleTextView")] &&
+        ((IDEConsoleTextView *)noti.object).textStorage.delegate != self)
     {
-        [self installHook];
+        ((IDEConsoleTextView *)noti.object).textStorage.delegate = self;
     }
 }
 
@@ -70,20 +71,34 @@ static NSString * const kContentMutableStringKey = @"_contents.mutableString";
               range:(NSRange)editedRange
      changeInLength:(NSInteger)delta
 {
-    if (editedRange.length == 0)
+    if (self.menuState == NSOffState ||
+        editedRange.length == 0)
     {
         return;
     }
     
-    NSString *contentsMutableString = [textStorage valueForKeyPath:kContentMutableStringKey];
+    NSString *contentsMutableString =
+    editedRange.location == 0?
+    [[textStorage valueForKeyPath:kContentMutableStringKey] substringWithRange:editedRange]:
+    [textStorage valueForKeyPath:kContentMutableStringKey];
+    
     NSString *editRangeString = [contentsMutableString substringWithRange:editedRange];
     //只处理需要修改的范围内的内容
     NSString *fixedRangeString = [self stringByReplaceUnicode:editRangeString];
-    NSString *fixedMutableString = [contentsMutableString stringByReplacingCharactersInRange:editedRange withString:fixedRangeString];
+    NSString *fixedMutableString = [contentsMutableString stringByReplacingCharactersInRange:editedRange
+                                                                                  withString:fixedRangeString];
     
-    [textStorage setValue:fixedMutableString forKeyPath:kContentMutableStringKey];
-    [textStorage setValue:[NSValue valueWithRange:NSMakeRange(editedRange.location, fixedMutableString.length-editedRange.location)] forKeyPath:@"_editedRange"];
-    [textStorage setValue:@(fixedMutableString.length-editedRange.location) forKeyPath:@"_editedDelta"];
+//    NSLog(@"--\n%ld -- %ld -- %ld",editedRange.location, editedRange.length, fixedMutableString.length);
+
+    [textStorage setValue:fixedMutableString
+               forKeyPath:kContentMutableStringKey];
+    
+    [textStorage setValue:[NSValue valueWithRange:NSMakeRange(editedRange.location,
+                                                              fixedMutableString.length-editedRange.location)]
+               forKeyPath:@"_editedRange"];
+    
+    [textStorage setValue:@(fixedMutableString.length-editedRange.location)
+               forKeyPath:@"_editedDelta"];
 }
 #pragma mark -- mathod
 - (void)addMenu
@@ -117,82 +132,16 @@ static NSString * const kContentMutableStringKey = @"_contents.mutableString";
     subMenuItem.state = value.boolValue?NSOnState:NSOffState;
     [pluginsMenuItem.submenu addItem:subMenuItem];
     
-    [self updateHookWithState:subMenuItem.state];
-}
-
-- (void)updateHookWithState:(NSCellStateValue)state
-{
-    self.menuState = state;
-    switch (state)
-    {
-        case NSOnState:
-        {
-            [self installHook];
-        }
-            break;
-        case NSOffState:
-        {
-            [self unInstallHook];
-        }
-            break;
-        default:
-            break;
-    }
+    self.menuState = subMenuItem.state;
 }
 
 - (void)toggleMenu:(NSMenuItem *)menuItem
 {
     menuItem.state = !menuItem.state;
     
-    [self updateHookWithState:menuItem.state];
+    self.menuState = menuItem.state;
     
     [[NSUserDefaults standardUserDefaults] setValue:@(menuItem.state) forKey:kFKConsoleStoreKey];
-}
-
-- (void)installHook
-{
-    [self findIDEConsoleTextViewWithView:[[NSApp mainWindow] contentView]];
-    if (self.fkConsoleTextView)
-    {
-        self.fkConsoleTextView.textStorage.delegate = self;
-    }
-}
-- (void)unInstallHook
-{
-    if (self.fkConsoleTextView)
-    {
-        self.fkConsoleTextView.textStorage.delegate = nil;
-    }
-}
-
-- (void)findIDEConsoleTextViewWithView:(NSView *)subView
-{
-    if (subView.subviews.count == 0)
-    {
-        return;
-    }
-    
-    for (NSView *tempView in subView.subviews)
-    {
-        if ([self isKindOfIDEConsoleTextView:tempView])
-        {
-            self.fkConsoleTextView = (IDEConsoleTextView *)tempView;
-            break;
-        }
-        else
-        {
-            [self findIDEConsoleTextViewWithView:tempView];
-        }
-    }
-}
-
-- (BOOL)isKindOfIDEConsoleTextView:(NSView *)subView
-{
-    if ([subView isKindOfClass:NSClassFromString(@"IDEConsoleTextView")])
-    {
-        return YES;
-    }
-    return NO;
 }
 
 - (NSString *)stringByReplaceUnicode:(NSString *)string

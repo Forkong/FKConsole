@@ -82,7 +82,7 @@ static NSString * const kContentMutableStringKey = @"_contents.mutableString";
     [[textStorage valueForKeyPath:kContentMutableStringKey] substringWithRange:editedRange]:
     [textStorage valueForKeyPath:kContentMutableStringKey];
     
-    if (contentsMutableString.length < editedRange.location)
+    if (contentsMutableString.length < (editedRange.location + editedRange.length))
     {
         return;
     }

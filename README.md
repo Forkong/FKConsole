@@ -4,7 +4,7 @@
 ---- 
 FKConsole是一个用于在Xcode控制台显示中文的插件。
 
-![image](https://raw.githubusercontent.com/Forkong/FKConsole/master/Screenshots/demo.gif)
+![Screenshot](https://raw.githubusercontent.com/Forkong/FKConsole/master/Screenshots/demo.gif)
 
 
 很多情况下，在程序中打印中文的时候：

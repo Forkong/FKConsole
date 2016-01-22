@@ -82,6 +82,11 @@ static NSString * const kContentMutableStringKey = @"_contents.mutableString";
     [[textStorage valueForKeyPath:kContentMutableStringKey] substringWithRange:editedRange]:
     [textStorage valueForKeyPath:kContentMutableStringKey];
     
+    if (contentsMutableString.length < editedRange.location)
+    {
+        return;
+    }
+    
     NSString *editRangeString = [contentsMutableString substringWithRange:editedRange];
     //只处理需要修改的范围内的内容
     NSString *fixedRangeString = [self stringByReplaceUnicode:editRangeString];

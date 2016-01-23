@@ -31,7 +31,7 @@ FKConsole就是为此而生的。FKConsole并不会影响你的程序，FKConsol
 
 ### How to install it?
 ---- 
-推荐使用[Alcatraz](https://github.com/alcatraz/Alcatraz)。
+推荐使用[Alcatraz](https://github.com/alcatraz/Alcatraz)（暂未上到Alcatraz）。
 
 你也可以clone整个工程，然后编译，插件会自动安装到`~/Library/Application Support/Developer/Shared/Xcode/Plug-ins`这个目录上。
 

@@ -4,8 +4,8 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2013 by Steve Nygard.
 //
 
-#import "IDEConsoleTextViewObjectiveCExpressionRangeDelegate.h"
-#import "IDEConsoleTextViewStandardIODelegate.h"
+//#import "IDEConsoleTextViewObjectiveCExpressionRangeDelegate.h"
+//#import "IDEConsoleTextViewStandardIODelegate.h"
 #import "DVTCompletingTextView.h"
 
 //@class DVTStackBacktrace;
@@ -35,8 +35,8 @@
 
 + (void)initialize;
 @property(nonatomic) int logMode; // @synthesize logMode=_logMode;
-@property(retain) id <IDEConsoleTextViewObjectiveCExpressionRangeDelegate> openingBracketLocationDelegate; // @synthesize openingBracketLocationDelegate=_openingBracketLocationDelegate;
-@property(retain) id <IDEConsoleTextViewStandardIODelegate> standardIODelegate; // @synthesize standardIODelegate=_standardIODelegate;
+//@property(retain) id <IDEConsoleTextViewObjectiveCExpressionRangeDelegate> openingBracketLocationDelegate; // @synthesize openingBracketLocationDelegate=_openingBracketLocationDelegate;
+//@property(retain) id <IDEConsoleTextViewStandardIODelegate> standardIODelegate; // @synthesize standardIODelegate=_standardIODelegate;
 //- (void).cxx_destruct;
 - (id)startingLocationForFindBar:(id)arg1 findingBackwards:(BOOL)arg2;
 - (void)dvtFindBar:(id)arg1 didUpdateCurrentResult:(id)arg2;

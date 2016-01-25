@@ -12,6 +12,7 @@
 		790017711C4FB02200930E13 /* FKConsole.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 790017701C4FB02200930E13 /* FKConsole.xcscheme */; };
 		790017741C4FB02200930E13 /* FKConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 790017731C4FB02200930E13 /* FKConsole.m */; };
 		790017771C4FB02200930E13 /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 790017761C4FB02200930E13 /* NSObject_Extension.m */; };
+		7948183E1C548E970004D92B /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7948183D1C548E970004D92B /* JRSwizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +25,12 @@
 		790017751C4FB02200930E13 /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
 		790017761C4FB02200930E13 /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
 		790017781C4FB02200930E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		790DD7D51C50AE970086B3AA /* DVTCompletingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCompletingTextView.h; sourceTree = "<group>"; };
-		790DD7D61C50AE970086B3AA /* DVTCompletingTextViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCompletingTextViewDelegate.h; sourceTree = "<group>"; };
-		790DD7D71C50AE970086B3AA /* DVTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTextView.h; sourceTree = "<group>"; };
-		790DD7D81C50AE970086B3AA /* IDEConsoleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEConsoleTextView.h; sourceTree = "<group>"; };
-		790DD7D91C50AE970086B3AA /* IDEConsoleTextViewObjectiveCExpressionRangeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEConsoleTextViewObjectiveCExpressionRangeDelegate.h; sourceTree = "<group>"; };
-		790DD7DA1C50AE970086B3AA /* IDEConsoleTextViewStandardIODelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEConsoleTextViewStandardIODelegate.h; sourceTree = "<group>"; };
+		7948183C1C548E970004D92B /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		7948183D1C548E970004D92B /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
+		79878E141C55C34A006DBCFE /* DVTCompletingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCompletingTextView.h; sourceTree = "<group>"; };
+		79878E151C55C34A006DBCFE /* DVTCompletingTextViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTCompletingTextViewDelegate.h; sourceTree = "<group>"; };
+		79878E161C55C34A006DBCFE /* DVTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTTextView.h; sourceTree = "<group>"; };
+		79878E181C55C34A006DBCFE /* IDEConsoleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEConsoleTextView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +79,9 @@
 				790017731C4FB02200930E13 /* FKConsole.m */,
 				790017751C4FB02200930E13 /* NSObject_Extension.h */,
 				790017761C4FB02200930E13 /* NSObject_Extension.m */,
-				790DD7D41C50AE970086B3AA /* Header */,
+				7948183C1C548E970004D92B /* JRSwizzle.h */,
+				7948183D1C548E970004D92B /* JRSwizzle.m */,
+				79878E131C55C34A006DBCFE /* Header */,
 				790017781C4FB02200930E13 /* Info.plist */,
 				7900176F1C4FB02200930E13 /* Supporting Files */,
 			);
@@ -93,15 +96,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		790DD7D41C50AE970086B3AA /* Header */ = {
+		79878E131C55C34A006DBCFE /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				790DD7D51C50AE970086B3AA /* DVTCompletingTextView.h */,
-				790DD7D61C50AE970086B3AA /* DVTCompletingTextViewDelegate.h */,
-				790DD7D71C50AE970086B3AA /* DVTTextView.h */,
-				790DD7D81C50AE970086B3AA /* IDEConsoleTextView.h */,
-				790DD7D91C50AE970086B3AA /* IDEConsoleTextViewObjectiveCExpressionRangeDelegate.h */,
-				790DD7DA1C50AE970086B3AA /* IDEConsoleTextViewStandardIODelegate.h */,
+				79878E141C55C34A006DBCFE /* DVTCompletingTextView.h */,
+				79878E151C55C34A006DBCFE /* DVTCompletingTextViewDelegate.h */,
+				79878E161C55C34A006DBCFE /* DVTTextView.h */,
+				79878E181C55C34A006DBCFE /* IDEConsoleTextView.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -174,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				790017741C4FB02200930E13 /* FKConsole.m in Sources */,
+				7948183E1C548E970004D92B /* JRSwizzle.m in Sources */,
 				790017771C4FB02200930E13 /* NSObject_Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +262,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FKConsole/Info.plist;
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -275,6 +281,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FKConsole/Info.plist;
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;

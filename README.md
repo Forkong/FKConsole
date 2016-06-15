@@ -2,6 +2,13 @@
 ---- 
 ### What is this?
 ---- 
+
+**注意：**
+
+Xcode8-beta 版本上不支持现有类型的插件安装，Xcode8-beta 上的`Xcode Source Editor Extension`无法实现本插件现有功能。
+
+如果想要在 Xcode8-beta 版本上安装插件，可以参考[https://github.com/alcatraz/Alcatraz/issues/475](https://github.com/alcatraz/Alcatraz/issues/475)上的回答。
+
 FKConsole是一个用于在Xcode控制台显示中文的插件。
 
 ![Screenshot](https://raw.githubusercontent.com/Forkong/FKConsole/master/Screenshots/demo.gif)

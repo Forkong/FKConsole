@@ -4,9 +4,12 @@
 ----
 **注意：**
 
-Xcode8-beta 版本上不支持现有类型的插件安装，Xcode8-beta 上的`Xcode Source Editor Extension`无法实现本插件现有功能。
+Xcode8 上不支持现有类型的插件安装，Xcode8 上的`Xcode Source Editor Extension`无法实现本插件现有功能。
 
-如果想要在 Xcode8-beta 版本上安装插件，可以暂时参考[https://github.com/alcatraz/Alcatraz/issues/475](https://github.com/alcatraz/Alcatraz/issues/475)上的回答。
+如果想要在 Xcode8 上安装插件，可以参考以下方式：
+- [https://github.com/inket/update_xcode_plugins](https://github.com/inket/update_xcode_plugins)
+- [https://github.com/fpg1503/MakeXcodeGr8Again](https://github.com/fpg1503/MakeXcodeGr8Again)
+
 ### What is this?
 ---- 
 
